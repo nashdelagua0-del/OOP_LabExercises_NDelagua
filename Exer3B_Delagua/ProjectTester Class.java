@@ -1,36 +1,17 @@
 public class ProjectTester {
     public static void main(String[] args) {
-        // Air Transport
-        Transportation heli = new Helicopter();
-        Transportation plane = new Airplane();
-        Transportation shuttle = new SpaceShuttle();
 
-        // Land Transport
-        Transportation truck = new Truck();
-        Transportation suv = new SUV();
-        Transportation tricycle = new Tricycle();
-        Transportation motorcycle = new Motorcycle();
-        Transportation kariton = new Kariton();
+        SupportMessage generalMsg = new SupportMessage("This is a general support message.");
+        System.out.println("SupportMessage: " + generalMsg.getMessage());
 
-        // Water Transport
-        Transportation boat = new Boat();
-        Transportation submarine = new Submarine();
+        AffirmationMessage affirmation = new AffirmationMessage("You are capable of amazing things!");
+        System.out.println("AffirmationMessage: " + affirmation.getMessage());
 
-        // Test all
-        System.out.println("---- Air Transport ----");
-        heli.info();
-        plane.info();
-        shuttle.info();
+        StressReliefTip tip = new StressReliefTip("Take a short walk to clear your mind.");
+        System.out.println("StressReliefTip: " + tip.getMessage());
 
-        System.out.println("\n---- Land Transport ----");
-        truck.info();
-        suv.info();
-        tricycle.info();
-        motorcycle.info();
-        kariton.info();
-
-        System.out.println("\n---- Water Transport ----");
-        boat.info();
-        submarine.info();
+        User user = new User("Alex");
+        user.setFeeling("stressed");
+        System.out.println("User: " + user.getName() + " is feeling " + user.getFeeling());
     }
 }
